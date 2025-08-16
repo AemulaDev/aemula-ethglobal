@@ -4,8 +4,6 @@ import Link from "next/link";
 import { formatTimestamp } from "@/lib/format";
 
 export default function ArticlePreview({ article }) {
-  const snippet = article.body.length > 100 ? article.body.slice(0, 100) + "…" : article.body;
-
   return (
     <Link
       href={`/article/${article.cid}`}
@@ -15,7 +13,7 @@ export default function ArticlePreview({ article }) {
         <div className="text-xl font-semibold">{article.title}</div>
         <time className="text-xs text-zinc-400">{formatTimestamp(article.timestamp)}</time>
       </div>
-      <div className="text-sm mt-1 text-zinc-800">{snippet}</div>
+      <div className="text-sm mt-1 text-zinc-800 line-clamp-2 min-h-[2.5rem]">{article.body}</div>
       <div className="text-xs text-zinc-400 mt-2">{article.author}</div>
     </Link>
   );
