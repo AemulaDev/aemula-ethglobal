@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAccount } from "wagmi";
 import { ConnectWallet } from "@coinbase/onchainkit/wallet";
-import { Address, Identity, Avatar, Name } from "@coinbase/onchainkit/identity";
+import { Identity, Avatar, Name } from "@coinbase/onchainkit/identity";
 import SegmentedTabs from "../components/SegmentedTabs";
 import { BsVectorPen } from "react-icons/bs";
 
