@@ -4,9 +4,6 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "./components/Navbar";
-import ConnectOrSubscribeModal from "./components/ConnectOrSubscribeModal";
-
-// diff to push deployment
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -44,25 +41,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // gating access
-  // isWalletConnected - minikit/wallet state
-  // isUserRegistered - if user exists in contract user mapping
-  const isWalletConnected = true; // TODO
-  const isUserRegistered = true;  // TODO
-  const shouldGate = !isWalletConnected || !isUserRegistered;
+
 
   return (
     <html lang="en">
       <body className="bg-stone-100 min-h-screen">
         <Providers>
-          <Navbar isWalletConnected={isWalletConnected} />
+          <Navbar/>
           <div className="max-w-md mx-auto px-4 py-5">{children}</div>
-          {/* modal to gate based on user's wallet/contract state */}
-          <ConnectOrSubscribeModal
-            open={shouldGate}
-            isWalletConnected={isWalletConnected}
-            isUserRegistered={isUserRegistered}
-          />
         </Providers>
       </body>
     </html>

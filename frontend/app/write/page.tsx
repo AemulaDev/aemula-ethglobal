@@ -7,21 +7,21 @@ export default function WritePage() {
   const [body, setBody] = useState("");
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 text-zinc-800">
       <input
-        className="w-full border border-neutral-300 rounded-xl p-3"
-        placeholder="Title"
+        className="w-full border border-stone-200 rounded-xl p-3 shadow-md shadow-stone-300"
+        placeholder="Headline"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       <textarea
-        className="w-full border border-neutral-300 rounded-xl p-3 min-h-[220px]"
-        placeholder="Body"
+        className="w-full border border-stone-200 rounded-xl p-3 min-h-[220px] shadow-md shadow-stone-300"
+        placeholder="Article Body"
         value={body}
         onChange={(e) => setBody(e.target.value)}
       />
       <button
-        className="w-full px-4 py-2 rounded-xl bg-black text-white"
+        className="w-full px-4 py-2 rounded-xl bg-zinc-800 text-stone-100 shadow-md shadow-zinc-400"
         onClick={() => alert("Stub: would publish to IPFS + emit event")}
       >
         Publish

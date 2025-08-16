@@ -1,8 +1,16 @@
 "use client";
 
-import { type ReactNode } from "react";
+import { type ReactNode, useEffect } from "react";
 import { base } from "wagmi/chains";
-import { MiniKitProvider } from "@coinbase/onchainkit/minikit";
+import { MiniKitProvider, useMiniKit } from "@coinbase/onchainkit/minikit";
+
+function InitMiniKit() {
+  const { setFrameReady, isFrameReady } = useMiniKit();
+  useEffect(() => {
+    if (!isFrameReady) setFrameReady();
+  }, [isFrameReady, setFrameReady]);
+  return null;
+}
 
 export function Providers(props: { children: ReactNode }) {
   return (
@@ -18,7 +26,8 @@ export function Providers(props: { children: ReactNode }) {
         },
       }}
     >
+      <InitMiniKit />
       {props.children}
     </MiniKitProvider>
   );
-}
+};
