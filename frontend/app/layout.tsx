@@ -6,6 +6,8 @@ import { Providers } from "./providers";
 import Navbar from "./components/Navbar";
 import ConnectOrSubscribeModal from "./components/ConnectOrSubscribeModal";
 
+// diff to push deployment
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
