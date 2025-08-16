@@ -4,6 +4,14 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "./components/Navbar";
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-montserrat',
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -44,7 +52,7 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.variable}>
       <body className="bg-stone-100 min-h-screen">
         <Providers>
           <Navbar/>

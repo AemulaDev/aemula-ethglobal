@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="max-w-md mx-auto h-14 flex items-center justify-between px-4 text-lg">
         <Link href="/read" className="flex items-center gap-1 text-zinc-800">
           <BsVectorPen />
-          <span>Aemula</span>
+          <div className="">Aemula</div>
         </Link>
 
         <div className="flex items-center gap-2">
