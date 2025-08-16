@@ -33,7 +33,7 @@ export async function POST(req: Request) {
             author: data?.authorId ?? "",
             timestamp: typeof data?.postTime === "number" ? data.postTime : 0,
           };
-        } catch (e) {
+        } catch {
           return {
             cid,
             title: "(unavailable)",
