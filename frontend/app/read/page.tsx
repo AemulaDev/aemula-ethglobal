@@ -8,7 +8,8 @@ const CIDS: string[] = [
   "bafkreihfcuikj4kkecohfgoq6wc2dg5wlpddveuo4xcalgt437eeohzym4",
   "bafkreihzie2fhlzvkyoxlqaem42xjwt74lbhg3ep4wxxe5nfwfqofvajba",
   "bafkreiandtvucztnvrdqg4q4yvss45mprznbxlsx4gizzl7bfpf4zadstq",
-  "bafkreichyd2op7afl7im47bko7bbp4fhf2p723xvc5unp32logid4rzdgu"
+  "bafkreichyd2op7afl7im47bko7bbp4fhf2p723xvc5unp32logid4rzdgu",
+  "bafkreiclbucqxtx2caiv7txvxymqcxg3icfyhrqovrdpjczajafnsvryga"
 ];
 
 export default function ReadPage() {
