@@ -9,14 +9,14 @@ export default function ArticlePreview({ article }) {
   return (
     <Link
       href={`/article/${article.cid}`}
-      className="block rounded-3xl border border-neutral-300 p-4 hover:bg-neutral-50 transition"
+      className="block p-4 bg-stone-50 rounded-xl border border-stone-200 shadow-md shadow-stone-300 hover:bg-stone-100 transition"
     >
-      <div className="flex items-baseline justify-between gap-4">
-        <h2 className="text-xl font-semibold">{article.title}</h2>
-        <time className="text-xs text-neutral-500">{formatTimestamp(article.timestamp)}</time>
+      <div className="flex items-baseline justify-between gap-4 text-zinc-800">
+        <div className="text-xl font-semibold">{article.title}</div>
+        <time className="text-xs text-zinc-400">{formatTimestamp(article.timestamp)}</time>
       </div>
-      <p className="text-sm text-neutral-700 mt-1">{snippet}</p>
-      <div className="text-xs text-neutral-500 mt-1">{article.author}</div>
+      <div className="text-sm mt-1 text-zinc-800">{snippet}</div>
+      <div className="text-xs text-zinc-400 mt-2">{article.author}</div>
     </Link>
   );
 };

@@ -51,7 +51,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="bg-background min-h-screen">
+      <body className="bg-stone-100 min-h-screen">
         <Providers>
           <Navbar isWalletConnected={isWalletConnected} />
           <div className="max-w-md mx-auto px-4 py-5">{children}</div>

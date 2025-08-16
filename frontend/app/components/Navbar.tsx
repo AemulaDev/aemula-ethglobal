@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Address } from "@coinbase/onchainkit/identity";
 import SegmentedTabs from "../components/SegmentedTabs";
+import { BsVectorPen } from "react-icons/bs";
 
 export default function Navbar({ isWalletConnected }) {
   const pathname = usePathname();
@@ -12,23 +13,23 @@ export default function Navbar({ isWalletConnected }) {
   isWalletConnected = false;
 
   return (
-    <nav className="border-b border-neutral-200x">
-      <div className="max-w-md mx-auto h-14 flex items-center justify-between px-4">
-        <Link href="/read" className="flex items-center gap-2">
-          <div className="h-5 w-5 rounded-md bg-black" />
-          <span className="font-semibold">aemula</span>
+    <nav className="">
+      <div className="max-w-md mx-auto h-14 flex items-center justify-between px-4 text-lg">
+        <Link href="/read" className="flex items-center gap-1 text-zinc-800">
+          <BsVectorPen />
+          <span className="">Aemula</span>
         </Link>
 
-        <div className="text-sm text-neutral-700 flex items-center gap-2">
+        <div className="text-sm text-zinc-400 flex items-center gap-2">
           {isWalletConnected ? (
-            <Address className="text-sm" />
+            <Address className="" />
           ) : (
-            <span className="text-neutral-500">No Wallet Connected</span>
+            <span className="">No Wallet Connected</span>
           )}
         </div>
       </div>
 
-      <div className="max-w-md mx-auto px-4 pb-3">
+      <div className="max-w-md mx-auto px-4">
         <SegmentedTabs active={tab} />
       </div>
     </nav>
