@@ -1,13 +1,18 @@
 {
 	"devDependencies": {
 		"@nomicfoundation/hardhat-ignition": "^3.0.0",
+		"@nomicfoundation/hardhat-network-helpers": "^3.0.0",
 		"@nomicfoundation/hardhat-toolbox": "^6.1.0",
 		"@nomicfoundation/hardhat-toolbox-viem": "^5.0.0",
-		"@types/node": "^22.8.5",
+		"@nomicfoundation/hardhat-verify": "^3.0.0",
+		"@nomicfoundation/hardhat-viem": "^3.0.0",
+		"@nomicfoundation/hardhat-viem-assertions": "^3.0.0",
+		"@types/node": "^22.17.2",
 		"dotenv": "^17.2.1",
 		"forge-std": "github:foundry-rs/forge-std#v1.9.4",
 		"hardhat": "^3.0.0",
-		"typescript": "~5.8.0",
+		"ts-node": "^10.9.2",
+		"typescript": "~5.8.3",
 		"viem": "^2.30.0"
 	},
 	"type": "module"
